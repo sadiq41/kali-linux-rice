@@ -128,7 +128,7 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:Terminal"
-set $ws2 "2.Edge"
+set $ws2 "2.Brave"
 set $ws3 "3.VM"
 set $ws4 "4.Spotify"
 set $ws5 "5.Discord"
@@ -143,7 +143,7 @@ set $ws10 "10"
 #exec --no-startup-id i3-msg 'workspace $ws3'
 
 #assign [class="VirtualBox Manager"] $ws3
-#for_window [class="VirtualBox Manager"] move to workspace $ws3
+for_window [class="VirtualBox Manager"] move to workspace $ws3
 #exec --no-startup-id VirtualBox
 #for_window [class="VirtualBox Manager"] move to workspace $ws3, focus
 
@@ -264,4 +264,5 @@ exec --no-startup-id i3-log
 exec_always  --no-startup-id ~/synclient_delay.sh &
 
 #exec_always --no-startup-id synclient tapbutton2=3
+exec --no-startup-id xbindkeys
 
